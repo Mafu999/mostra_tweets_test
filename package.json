@@ -1,21 +1,27 @@
 {
   "name": "mostra_tweets",
   "version": "0.1.0",
+  "main": "App.js",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "express": "^4.17.1",
+    "node": "^16.10.0",
+    "nodemon": "^2.0.13",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "twit": "^2.2.11"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "nodemon App.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "go": ""
+  },
+  "devDependencies": {
+    "nodemon": "^2.2.6"
   },
   "eslintConfig": {
     "extends": [
