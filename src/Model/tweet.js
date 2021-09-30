@@ -1,10 +1,11 @@
-class Data {
+module.exports = class Data {
     constructor({
-        id, created_at, text, user
+        id, nome, nome_de_usuario, texto, hashtags
     }){
         this.id = id
-        this.created_at= created_at
-        this.text= text
-        this.user = user
+        this.nome= nome
+        this.nome_de_usuario= nome_de_usuario
+        this.texto = texto
+        this.hashtags = hashtags
     }
 }

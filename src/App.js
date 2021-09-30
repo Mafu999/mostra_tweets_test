@@ -13,25 +13,21 @@ let contentOfTweet = '%23GTA'
 app.get('/tweets', (request, response)=>{
 
     T.get(`https://api.twitter.com/1.1/search/tweets.json?q=${contentOfTweet}&result_type=recent`, (err, data, response)=>{
-    //const result = [data.statuses.id, data.statuses.user, data.statuses.text]    
+        
     try{
-            //var percorreDados = ()=>{ for(let i = 0; i < data.statuses.length; i++){  
+              
                let parametros = data.statuses.map(function(elemen){
                 return [{
                     id: elemen.user.id, 
                     nome: elemen.user.name,
                     nome_de_usuario: elemen.user.screen_name,
                     texto: elemen.text,
-                    hashtags: elemen.entities.hashtags.slice(0,30)
+                    hashtags: elemen.entities.hashtags
                 }]
               })
               console.log(parametros)
               
             }
-            
-        
-        //console.log(percorreDados())
-     
         catch(err){
             //é necessário esse if?
             if (err){
@@ -43,4 +39,4 @@ app.get('/tweets', (request, response)=>{
 })
 app.listen(1112)
 
-module.exports = parametros
+
