@@ -14,4 +14,4 @@ module.exports = class TweetDao {
     
    
 }
-console.log(geraPost.Tweet.id)
+console.log(geraPost)
