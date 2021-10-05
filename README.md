@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+<h1 align="center"> 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo](https://pbs.twimg.com/profile_images/1354485966254206978/1F6Gm-LZ_400x400.jpg) </h1>
 
-## Available Scripts
+<p align="center">
+ <a href="#sobre">Sobre</a> •
+ <a href="#pré-requisitos">Pré-Requisitos</a> • 
+ <a href="#rodando-o-projeto">Rodando o projeto</a> • 
+ <a href="#tecnologias">Tecnologias</a> •  
+ <a href="#consumindo">Api do Twitter</a>
+</p>
 
-In the project directory, you can run:
+<h1 align="center">Controle Tweet</h1>
 
-### `npm start`
+### Sobre
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Desenvolvimento de um mecanismo de controle que faz buscas específicas de tweets utilizando a API do Twitter e salva as informações localmente.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
+### Pré-requisitos 
 
-### `npm test`
+Antes de começar, você precisa ter instalado em sua máqusina as seguintes ferramentas:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
-### `npm run build`
+---
+### Rodando o projeto  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Clone este repositório
+$ git clone <https://github.com/Mafu999/mostra_tweets_test.git>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Acesse a pasta do projeto no terminal/cmd
+$ cd mostra_tweets_test
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Instale a npm
+$ npm install
 
-### `npm run eject`
+# Instale as tecnologias a seguir
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
+### Tecnologias
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+As seguintes ferramentas foram utilizadas na construção do projeto:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [React](https://reactjs.org/)
+- [React Hook Form](https://react-hook-form.com/get-started)
+- [React Router Dom](https://reactrouter.com/web/guides/quick-start)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [Node](https://www.npmjs.com/package/node)
+- [SQLite](https://www.npmjs.com/package/sqlite)
+- [Twit](https://www.npmjs.com/package/twit)
+---
+<h2 align="center">API do Twitter</h2>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Consumindo
+Para consumir a API do twitter, é necessário criar uma conta na [Plataforma Dev](https://developer.twitter.com/en/products/twitter-api) deles e guardar os tokens de acesso para usa-los na requisição através da Lib "Twit". Deixo aqui um [artigo](https://medium.com/@diegomagasouza/como-acessar-e-consumir-a-api-do-twitter-com-nodejs-1ba6545b7203) para ajudar a fazer esse trâmite.
+---
+<h2 align="center">Observações</h2>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está incompleto e falta apenas dois passos para que ele funcione:
+<ol>
+  <li>Exportar dados de requisição da API para uma view em react</li>
+  <li>Depois de validados nessa view, salvá-los no banco SQLite interno</li>
+</ol>
